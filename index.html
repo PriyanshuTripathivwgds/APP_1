@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Applications</title>
+    <title>ZPA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
@@ -15,12 +15,12 @@
         <div class="topbar-inner">
             <div class="brand">
                 <span class="brand-mark" aria-hidden="true">◆</span>
-                <span class="brand-text">Engineering Portal</span>
+                <span class="brand-text">ZPA Portal</span>
             </div>
             <nav class="top-nav" aria-label="Quick Navigation">
-                <a href="https://app4.company.com" target="_blank" rel="noopener noreferrer">Jira</a>
-                <a href="https://app5.company.com" target="_blank" rel="noopener noreferrer">Grafana</a>
-                <a href="https://app6.company.com" target="_blank" rel="noopener noreferrer">OpenShift</a>
+                <a href="https://devstack.vwgroup.com/jira/secure/RapidBoard.jspa?rapidView=52680&projectKey=KI2TE&selectedIssue=KI2TE-4857#" target="_blank" rel="noopener noreferrer">Jira Kanban</a>
+                <a href="https://sc3.vw.vwg/sc3/index.do?lang=en" target="_blank" rel="noopener noreferrer">SC3 Ticketing</a>
+                <a href="https://devstack.vwgroup.com/bitbucket/projects/KI2TE/repos/zpa/browse" target="_blank" rel="noopener noreferrer">Bitbucket</a>
             </nav>
         </div>
     </header>
@@ -28,53 +28,76 @@
     <main class="container">
         <header class="hero">
             <p class="kicker">Internal Workspace</p>
-            <h1>My Applications</h1>
-            <p class="subtitle">Quick access to engineering tools, project systems, and platform services.</p>
+            <h1>ZPA</h1>
+            <p class="subtitle">Quick access to ZPA environments, platform consoles, and supporting tools.</p>
         </header>
 
         <section class="app-grid" aria-label="Application Links">
-            <a href="https://app1.company.com" target="_blank" rel="noopener noreferrer" class="card">
+            <article class="card">
                 <span class="chip">Core</span>
                 <h3>ZPA</h3>
                 <p>Drawing Validation System</p>
-            </a>
+                <div class="link-list" aria-label="ZPA Environment Links">
+                    <a href="https://web-zpa-prod.apps.prod-intranet-02-wob.ocp.vwgroup.com/" target="_blank" rel="noopener noreferrer">Production</a>
+                    <a href="https://web-zpa-qa.apps.prod-intranet-02-wob.ocp.vwgroup.com/dashboard" target="_blank" rel="noopener noreferrer">QA</a>
+                    <a href="https://web-zpa-dev.apps.dev-intranet-02-wob.ocp.vwgroup.com/dashboard" target="_blank" rel="noopener noreferrer">Dev</a>
+                </div>
+            </article>
 
-            <a href="https://app2.company.com" target="_blank" rel="noopener noreferrer" class="card">
+            <article class="card">
+                <span class="chip">Platform</span>
+                <h3>OCP Console</h3>
+                <p>OpenShift cluster and project access.</p>
+                <div class="link-list" aria-label="OCP Environment Links">
+                    <a href="https://console.apps.prod-intranet-02-wob.ocp.vwgroup.com/k8s/cluster/project.openshift.io~v1~Project" target="_blank" rel="noopener noreferrer">QA</a>
+                    <a href="https://console.apps.dev-intranet-02-wob.ocp.vwgroup.com/dev-monitoring/ns/zpa-dev?dashboard=grafana-dashboard-k8s-resources-namespace" target="_blank" rel="noopener noreferrer">Dev</a>
+                    <a href="https://console.apps.prod-intranet-02-wob.ocp.vwgroup.com/k8s/cluster/project.openshift.io~v1~Project" target="_blank" rel="noopener noreferrer">Production</a>
+                </div>
+            </article>
+
+            <article class="card">
                 <span class="chip">Knowledge</span>
                 <h3>KVS</h3>
-                <p>Knowledge Validation Service</p>
-            </a>
+                <p>Knowledge Validation Service.</p>
+                <div class="link-list" aria-label="KVS Links">
+                    <a href="https://kvs.wob.vw.vwg:8081/DE-script/webagent/DE/menu.html" target="_blank" rel="noopener noreferrer">Production</a>
+                </div>
+            </article>
 
-            <a href="https://app3.company.com" target="_blank" rel="noopener noreferrer" class="card">
-                <span class="chip">AI</span>
-                <h3>Engineering Assistant</h3>
-                <p>AI Document Search</p>
-            </a>
-
-            <a href="https://app4.company.com" target="_blank" rel="noopener noreferrer" class="card">
-                <span class="chip">Tracking</span>
-                <h3>Jira</h3>
-                <p>Issue Tracking</p>
-            </a>
-
-            <a href="https://app5.company.com" target="_blank" rel="noopener noreferrer" class="card">
+            <article class="card">
                 <span class="chip">Observability</span>
-                <h3>Grafana</h3>
-                <p>Monitoring Dashboard</p>
-            </a>
+                <h3>Dynatrace</h3>
+                <p>APM dashboard and runtime insights.</p>
+                <div class="link-list" aria-label="Dynatrace Links">
+                    <a href="https://apmaas-prod.mls-apm.prd.eu.gs.aws.cloud.vwgroup.com/e/9cc50a5c-347b-4bf7-89a7-d3b143fc3146/#dashboard;gtf=-24h%20to%20now;gf=all;id=6b38732e-d26b-45c7-b107-ed85e87ff288" target="_blank" rel="noopener noreferrer">Dashboard</a>
+                </div>
+            </article>
 
-            <a href="https://app6.company.com" target="_blank" rel="noopener noreferrer" class="card">
-                <span class="chip">Platform</span>
-                <h3>OpenShift</h3>
-                <p>Container Platform</p>
-            </a>
+            <article class="card">
+                <span class="chip">Observability</span>
+                <h3>MLaaS Kibana</h3>
+                <p>Operational and event analytics dashboards.</p>
+                <div class="link-list" aria-label="MLaaS Kibana Links">
+                    <a href="https://hpf-prod.kb.mlaas.mls-ml.prd.eu.gs.aws.cloud.vwgroup.com/s/gep/app/dashboards#/view/a550d8d2-78b0-4ff8-b7e8-b6577922ae70?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-24h%2Fh,to:now))" target="_blank" rel="noopener noreferrer">Event_Extended</a>
+                    <a href="https://hpf-prod.kb.mlaas.mls-ml.prd.eu.gs.aws.cloud.vwgroup.com/s/gep/app/dashboards#/view/3b4f0e86-33af-4147-807f-b607131ae98a?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))" target="_blank" rel="noopener noreferrer">ZPA Dashboard</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="chip">Documentation</span>
+                <h3>Confluence</h3>
+                <p>ZPA project documentation and knowledge pages.</p>
+                <div class="link-list" aria-label="Confluence Links">
+                    <a href="https://devstack.vwgroup.com/confluence/spaces/KI2TE/pages/697294910/ZP+Zeichnungspr%C3%BCfung" target="_blank" rel="noopener noreferrer">ZP Zeichnungsprufung Page</a>
+                </div>
+            </article>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p>Engineering Workspace</p>
-            <p>© 2026 Company Name. Internal Use Only.</p>
+            <p>ZPA Workspace</p>
+            <p>© 2026 Volkswagen. Internal Use Only.</p>
         </div>
     </footer>
 
